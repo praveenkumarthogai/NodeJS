@@ -43,6 +43,6 @@ app.use((req, res, next) => {
 app.use(errHandler);
 
 
-app.listen(process.env.APP_PORT || 5000, () => {
+app.listen(8081, () => {
     console.log("POC - Application is running")
 })
