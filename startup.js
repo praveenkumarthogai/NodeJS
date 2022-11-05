@@ -43,6 +43,6 @@ app.use((req, res, next) => {
 app.use(errHandler);
 
 
-app.listen(5000, () => {
+app.listen(8080, () => {
     console.log("POC - Application is running")
 })
