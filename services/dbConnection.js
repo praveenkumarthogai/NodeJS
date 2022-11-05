@@ -9,7 +9,8 @@ const dbConnection =
     });
 
   dbConnection.connect(function(err) {
-    if (err) throw err;
+    //if (err) throw err;
+    if(err) console.log("DB Connection Failed");
     console.log("Connected!");
   });
   module.exports = dbConnection;

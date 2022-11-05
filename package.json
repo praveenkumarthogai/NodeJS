@@ -5,8 +5,9 @@
   "main": "startup.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node startup.js",
-    "debug": "node --inspect startup.js"
+    "start":"npm install && node startup.js",
+    "debug": "node --inspect startup.js",
+    "local":"node startup.js"
   },
   "author": "Praveen",
   "license": "ISC",
