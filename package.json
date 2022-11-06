@@ -5,19 +5,24 @@
   "main": "startup.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"npm install && node startup.js",
+    "start": "npm install && node startup.js",
     "debug": "node --inspect startup.js",
-    "local":"node startup.js"
+    "local": "node startup.js",
+    "watch": "nodemon startup.js"
   },
   "author": "Praveen",
   "license": "ISC",
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
     "body-parser": "^1.20.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.20",
+    "swagger-jsdoc": "^6.2.5",
+    "swagger-ui-express": "^4.5.0",
+    "uuid": "^9.0.0",
     "winston": "^3.8.2"
   }
 }

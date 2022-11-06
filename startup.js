@@ -5,6 +5,7 @@ const log = require('./middlewares/logger')
 const bodyparser = require('body-parser');
 const app = express();
 
+
 const loginRouter = require('./routes/login.router');
 const productRouter = require('./routes/product.router');
 const authenticationMiddleware =  require('./middlewares/authentication');

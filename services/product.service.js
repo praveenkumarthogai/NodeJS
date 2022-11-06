@@ -1,4 +1,6 @@
-const dbcontext = require('../services/dbConnection');
+const dbcontext = require('../utility/dbConnection');
+//#To Generate UUID 
+//const uuid = require('uuid').v4();
 
 async function getAllProductDetails(req, result) {
   await dbcontext.query(`SELECT * from Product`, (error, results, fields) => {

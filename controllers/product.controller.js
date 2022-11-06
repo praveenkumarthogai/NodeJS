@@ -1,4 +1,5 @@
 const productService = require('./../services/product.service');
+const productValidator = require('../validators/product.validator');
 
 
 async function getAllProducts(req, res, next) {
@@ -15,8 +16,12 @@ async function getAllProducts(req, res, next) {
 
 
 async function addNewProduct(req, res, next) {
-    console.log(req.body,"bodyyy");
+
     try {
+
+        //Validate request body
+        req.body = await productValidator.validateAsync(req.body);
+
         await productService.createNewItem(req.body, (err, data) => {
             res.send("New Item Created Successfully");
         })
