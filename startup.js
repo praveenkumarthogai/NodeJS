@@ -1,14 +1,16 @@
-//imports
+// imports
 const express = require('express');
 const errHandler = require('./middlewares/errorHandler');
 const log = require('./middlewares/logger')
 const bodyparser = require('body-parser');
-const app = express();
+const swaggerUI = require("swagger-ui-express");
 
+const app = express();
 
 const loginRouter = require('./routes/login.router');
 const productRouter = require('./routes/product.router');
 const authenticationMiddleware =  require('./middlewares/authentication');
+const specs= require('./utility/swagger');
 
 //req body parsing middlewares
 app.use(bodyparser.json());
@@ -17,6 +19,8 @@ app.use(bodyparser.urlencoded({extended:true}));
 //logger middleware
 app.use(log.logger);
 
+//swagger UI
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
 //Health Check
 app.get('/',(req,res)=>{

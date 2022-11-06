@@ -10,7 +10,6 @@ async function getAllProductDetails(req, result) {
     console.log(results);
     result(null, results)
   });
-
 }
 
 
