@@ -24,7 +24,7 @@ app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
 //Health Check
 app.get('/',(req,res)=>{
-res.send("POC application Health Check is successfull")
+res.send({message :"POC application Health Check is successfull"} )
 })
 
 
@@ -49,5 +49,8 @@ app.use(errHandler);
 
 
 app.listen(8080, () => {
-    console.log("POC - Application is running")
+    console.log("POC - Application is running");
 })
+
+
+module.exports = app;

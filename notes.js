@@ -11,6 +11,6 @@
 
 ---> eslint-disable   for disable eslint for specific file 
 
-
-
+//mysql command to turn off safe update replace 1 to turn on
+--   >SET SQL_SAFE_UPDATES = 0;
  */

@@ -1,23 +1,137 @@
 {
   "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2022-11-06T16:35:44.531Z",
-    "end": "2022-11-06T16:35:44.532Z",
-    "duration": 1,
-    "testsRegistered": 0,
-    "passPercent": null,
-    "pendingPercent": null,
+    "start": "2022-11-07T08:02:41.953Z",
+    "end": "2022-11-07T08:02:41.989Z",
+    "duration": 36,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false
   },
   "results": [
-    false
+    {
+      "uuid": "3c9008a9-6330-4eb8-aaa6-050c7391e727",
+      "title": "",
+      "fullFile": "C:\\Users\\Praveen\\Desktop\\POC\\tests\\BDD\\product.test.js",
+      "file": "\\tests\\BDD\\product.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "56123109-1f8c-423b-8c76-dbd697d84abb",
+          "title": "product",
+          "fullFile": "C:\\Users\\Praveen\\Desktop\\POC\\tests\\BDD\\product.test.js",
+          "file": "\\tests\\BDD\\product.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"product\"",
+              "fullTitle": "product \"before each\" hook in \"product\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "8c9a45b3-8192-47a2-9c18-ce67bcb847a7",
+              "parentUUID": "56123109-1f8c-423b-8c76-dbd697d84abb",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "31c3626a-e613-4ddd-a575-009d31298947",
+              "title": "get endpoints",
+              "fullFile": "C:\\Users\\Praveen\\Desktop\\POC\\tests\\BDD\\product.test.js",
+              "file": "\\tests\\BDD\\product.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "health check",
+                  "fullTitle": "product get endpoints health check",
+                  "timedOut": false,
+                  "duration": 18,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "let result = await chai.request(startUp).get('/').send();\nexpect(result.body.message).to.equal(\"POC application Health Check is successfull\");",
+                  "err": {},
+                  "uuid": "dfd3f3b0-5ab7-4615-8568-aa73903930b4",
+                  "parentUUID": "31c3626a-e613-4ddd-a575-009d31298947",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "get auth token",
+                  "fullTitle": "product get endpoints get auth token",
+                  "timedOut": false,
+                  "duration": 5,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "let token =await chai.request(startUp).get('/api/login').send();\nexpect(token.body).to.not.be.null;",
+                  "err": {},
+                  "uuid": "7e67ae2a-7005-4b0b-be77-8ffe87c329aa",
+                  "parentUUID": "31c3626a-e613-4ddd-a575-009d31298947",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "dfd3f3b0-5ab7-4615-8568-aa73903930b4",
+                "7e67ae2a-7005-4b0b-be77-8ffe87c329aa"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 23,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
   ],
   "meta": {
     "mocha": {

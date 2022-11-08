@@ -4,13 +4,14 @@
   "description": "maintains product details",
   "main": "startup.js",
   "scripts": {
-    "test": "mocha ./tests/*.test.js --reporter mochawesome",
+    "test --manual": "mocha ./tests/BDD/*.spec.js --reporter mochawesome",
     "start": "npm install && node startup.js",
     "debug": "node --inspect startup.js",
     "local": "node startup.js",
     "watch": "nodemon startup.js",
     "lint:check": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "test": "nodemon --exec \"mocha ./tests/BDD/*.spec.js -R min\""
   },
   "author": "Praveen",
   "license": "ISC",
